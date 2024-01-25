@@ -51,7 +51,7 @@ function stringifyOptionPropValue(value) {
 function match(enableFuzzyMatch, needle, haystack) {
   return enableFuzzyMatch
     ? fuzzysearch(needle, haystack)
-    : haystack.toLowerCase().startsWith((needle ?? "").toLowerCase())
+    : haystack.toLowerCase().startsWith(needle.toLowerCase())
 }
 
 function getErrorMessage(err) {
